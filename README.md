@@ -44,5 +44,23 @@ A program to invert the row and column of the cells in the spreadsheet. For exam
 #### Packages to install
 1. openpyxl: Python module for working with excel files. [install](https://openpyxl.readthedocs.io/en/stable/)
 
+### 4- Text Files to Spreadsheet
+A program to read in the contents of several text files (Entered by user) and insert those contents into a spreadsheet, with one line of text per row. The lines of the first text file will be in the cells of column A, the lines of the second text file will be in the cells of column B, and so on.
 
- 	
+#### Packages to install
+1. openpyxl: Python module for working with excel files. [install](https://openpyxl.readthedocs.io/en/stable/)
+2. pyinputplus: Python module for validating user inputs. [install](https://pypi.org/project/PyInputPlus/)
+
+#### Code Description
+- import our packages
+- create blank workbook
+- while its true ask user for inputs
+	1. To Add file
+	2. To start processing the added files
+	3. To exit the program
+- then whe check if the entered input by user is a valid one or not and if it is valid we call the desired function for that
+- Functions:
+	1. add_file: This function ask user for file name and append it to the user_files list.
+	2. stop: This function exit the program and clear every thing 
+	3. start_processing: This function takes user_files list and proccess the list. if the list is empty then print and error.or else it check if file exists or not if it exists then it loops thourgh file and read every file lines and write it to the excel file. And finally we save our excel file. **If File is not found it is escaped**.
+	
